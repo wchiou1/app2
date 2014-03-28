@@ -29,7 +29,7 @@ class Post < ActiveRecord::Base
   def read_object(object,indent)
     tempstr=""
     for i in 0..indent
-      tempstr+="/^/"
+      tempstr+=" "
     end
     object.each do |type,element|
       if element.class == Array
@@ -44,7 +44,7 @@ class Post < ActiveRecord::Base
   def read_array(array,indent)
     tempstr=""
     for i in 0..indent
-      tempstr+="/^/"
+      tempstr+=" "
     end
     array.each do |element|
       if element.class == Hash
